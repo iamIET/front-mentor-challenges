@@ -113,7 +113,7 @@ body {
 @media screen and (max-width: 480px) {
   .container {
     width: 80%;
-    height: 80%;
+    height: 90%;
     flex-direction: column-reverse;
     border-radius: 10px;
   }
@@ -175,12 +175,6 @@ body {
 
   .left__wrapper {
     height: 100%;
-  }
-
-  .attribution {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
   }
 }
 
