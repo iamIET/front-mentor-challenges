@@ -98,6 +98,7 @@ body {
 
 .bottom__city {
   font-size: 14px;
+  color: var(--dark-grayish-blue);
 }
 
 .bottom__status {
@@ -132,4 +133,19 @@ body {
 .attribution a {
   font-size: 11px;
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-position: -750px -600px, 100px 300px;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 90%;
+  }
 }
