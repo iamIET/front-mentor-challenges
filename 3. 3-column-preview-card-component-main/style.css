@@ -138,6 +138,9 @@ body {
 /* Default */
 
 @media screen and (max-width: 480px) {
+  body {
+    height: 1250px;
+  }
   .container {
     width: 375px;
     height: 1200px;
