@@ -178,6 +178,10 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+  main {
+    height: 800px;
+  }
+
   .container {
     width: 340px;
     height: 740px;
