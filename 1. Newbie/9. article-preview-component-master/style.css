@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desa-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-blue);
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  width: 880px;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.left {
+  width: 340px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.right {
+  width: 540px;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+}
+
+.right__wrapper {
+  width: 440px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.right__header {
+  width: 420px;
+  height: 90px;
+  font-size: 25px;
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+}
+
+.right__desc {
+  width: 420px;
+  height: 60px;
+  font-weight: 500;
+  color: var(--desa-dark-blue);
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.right__profile {
+  width: 440px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.right__profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.right__profile__info {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.right__profile__info-name {
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+}
+
+.right__profile__info-date {
+  color: var(--grayish-blue);
+}
+
+.right__share {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right__share:hover {
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.right__share:hover i {
+  color: #fff;
+}
+
+.right__share i {
+  font-size: 20px;
+  color: var(--desa-dark-blue);
+}
+
+.right__share-tooltip {
+  width: 200px;
+  height: 50px;
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 120%;
+  left: 320px;
+  transition: all 0.3s;
+}
+
+.disabled {
+  display: none;
+}
+
+.right__share-tooltip:nth-child(n + 1) {
+  color: #fff;
+  font-size: 23px;
+}
+
+.right__share-tooltip-text {
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.right__share-tooltip-arrow {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid var(--very-dark-grayish-blue);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid none;
+  border-left: 10px solid transparent;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    width: 375px;
+    height: 670px;
+  }
+
+  .container {
+    width: 325px;
+    height: 520px;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    height: 200px;
+  }
+
+  .left img {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+  }
+
+  .right {
+    height: 320px;
+  }
+
+  .right__wrapper {
+    width: 260px;
+    height: 250px;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .right__header {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .right__desc {
+    width: 100%;
+    height: 110px;
+    font-size: 13px;
+    line-height: 1.5em;
+  }
+
+  .right__profile {
+    width: 100%;
+    height: 40px;
+  }
+
+  .right__profile__info-name {
+    font-size: 16px;
+  }
+}
